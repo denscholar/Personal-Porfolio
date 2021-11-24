@@ -1,6 +1,4 @@
-# Personal-Porfolio
-
-# _{Application Name}_
+# My Personal Portfolio
 
 #### By _**{List of contributors}**_
 
