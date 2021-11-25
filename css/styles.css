@@ -13,6 +13,7 @@
   display: flex;
   align-items: center;
   height: 80px;
+  box-sizing: border-box;
 }
 
 header .nav a {
@@ -26,7 +27,7 @@ header .nav a {
   color: #28352f;
 }
 
-section header .nav {
+div header .nav {
   display: flex;
   align-content: center;
   align-items: center;
@@ -45,6 +46,7 @@ section header .nav {
 }
 
 .hero-heading h1 {
+  margin-top: 58px;
   padding: 0 25px 0 25px;
   text-align: center;
   font-size: 40px;
