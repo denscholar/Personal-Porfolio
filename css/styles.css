@@ -1,17 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
   text-decoration: none;
+  list-style-type: none;
 }
 
 .header {
-  padding: 50px 35px;
+  padding: 45px 24px 15px 24px;
 }
 
-.nav a {
+header .nav a {
   font-size: 25px;
   font-weight: 600;
   color: #28352f;
@@ -22,34 +23,44 @@
   color: #28352f;
 }
 
-section .nav {
+section header .nav {
   display: flex;
+  align-content: center;
   align-items: center;
   justify-content: space-between;
 }
 
 .hero-heading {
-  background-image: url("../images/background-image.png");
-  background-position: center;
+  background: url("../images/background-image.png");
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  height: 50rem;
+  width: 100%;
+  padding-top: 40px;
 }
 
 .hero-heading h1 {
-  padding: 50px 25px 0 25px;
+  padding: 0 25px 0 25px;
   text-align: center;
   font-size: 40px;
   line-height: 50px;
   font-weight: bold;
+  color: #172b4d;
+  font-style: normal;
 }
 
 .hero-heading #title {
   color: #36b37e;
   padding-top: 5px;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: bold;
+  text-align: center;
+  font-style: normal;
 }
 
-.hero-heading p {
+.hero-heading .description {
   text-align: center;
   color: #172b4d;
   margin: 35px 0;
