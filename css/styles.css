@@ -6,7 +6,7 @@
   text-decoration: none;
 }
 .header {
-  padding: 64px 35px;
+  padding: 50px 35px;
 }
 .nav a {
   font-size: 25px;
@@ -17,9 +17,47 @@
   font-size: 25px;
   color: #28352f;
 }
-
+/* In order to lay out the elements on the page I used Flexbox here */
 section .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* hero-image */
+.hero-heading {
+  background-image: url("../images/background-image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* Hero heading Text*/
+.hero-heading h1 {
+  padding: 50px 25px 0 25px;
+  text-align: center;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: bold;
+}
+.hero-heading #title {
+  color: #36b37e;
+  padding-top: 5px;
+}
+.hero-heading p {
+  text-align: center;
+  color: #172b4d;
+  margin: 35px 0px;
+  font-size: 20px;
+  padding: 0 24px;
+}
+
+/* Hero Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+.social-icons a img {
+  padding: 10px;
 }
