@@ -9,7 +9,10 @@
 }
 
 .header {
-  padding: 45px 24px 15px 24px;
+  padding: 15px 24px;
+  display: flex;
+  align-items: center;
+  height: 80px;
 }
 
 header .nav a {
@@ -28,11 +31,12 @@ section header .nav {
   align-content: center;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .hero-heading {
-  background: url("../images/background-image.png");
-  background-position: center bottom;
+  background: url("../images/mobile-background.svg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 50rem;
