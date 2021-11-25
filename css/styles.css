@@ -1,30 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 * {
-  font-family: "Inter";
+  font-family: Inter;
   margin: 0;
   padding: 0;
   text-decoration: none;
 }
+
 .header {
   padding: 50px 35px;
 }
+
 .nav a {
   font-size: 25px;
   font-weight: 600;
   color: #28352f;
 }
+
 .nav .fas {
   font-size: 25px;
   color: #28352f;
 }
-/* In order to lay out the elements on the page I used Flexbox here */
+
 section .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* hero-image */
 .hero-heading {
   background-image: url("../images/background-image.png");
   background-position: center;
@@ -33,7 +36,6 @@ section .nav {
   min-height: 100vh;
 }
 
-/* Hero heading Text*/
 .hero-heading h1 {
   padding: 50px 25px 0 25px;
   text-align: center;
@@ -41,10 +43,12 @@ section .nav {
   line-height: 50px;
   font-weight: bold;
 }
+
 .hero-heading #title {
   color: #36b37e;
   padding-top: 5px;
 }
+
 .hero-heading p {
   text-align: center;
   color: #172b4d;
@@ -53,11 +57,11 @@ section .nav {
   padding: 0 24px;
 }
 
-/* Hero Icons */
 .social-icons {
   display: flex;
   justify-content: center;
 }
+
 .social-icons a img {
   padding: 10px;
 }
