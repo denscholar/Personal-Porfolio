@@ -27,7 +27,7 @@ header .nav a {
   color: #28352f;
 }
 
-div header .nav {
+section header .nav {
   display: flex;
   align-content: center;
   align-items: center;
