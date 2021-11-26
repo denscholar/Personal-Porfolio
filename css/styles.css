@@ -120,7 +120,7 @@ div header .nav {
 }
 
 .container .card {
-  background: url(../images/calculator.png) center / cover no-repeat;
+  background: url(../images/plaholder.png) center / cover no-repeat;
   min-height: 474px;
   position: relative;
   border: 1px solid #d0d9d4;
@@ -181,4 +181,96 @@ button {
   border-radius: 4px;
   color: white;
   border: none;
+}
+
+.about-me {
+  text-align: center;
+}
+
+.img-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: flex-end;
+}
+
+.img-content h1 {
+  text-align: center;
+  color: #172b4d;
+  font-size: 40px;
+  font-weight: 700;
+  flex: 2;
+  padding-left: 50px;
+}
+.img-content img {
+  width: 50px;
+}
+.about-me p {
+  font-size: 20px;
+  color: #42526e;
+  font-weight: 400;
+  padding: 0 12px 30px 12px;
+}
+
+.button-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.button-content button {
+  text-align: center;
+}
+.button-content img {
+  margin-right: 40px;
+}
+
+.lib-container {
+  text-align: center;
+}
+
+.lib-container .lib-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  align-items: center;
+  margin: 17px;
+}
+
+.lib-container .lib-card {
+  background: url("../images/Img_plaholder.png") center / cover no-repeat;
+  min-height: 352px;
+}
+
+.lib-card img {
+  margin-top: 20px;
+}
+
+.lib-card h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #344563;
+  margin-top: 10px;
+}
+
+.lib-card ul {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+
+.lib-card li {
+  padding: 10px;
+  background-color: white;
+  margin: 5px;
+  border-radius: 8px;
+  color: #36b37e;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  font-weight: 600;
 }
