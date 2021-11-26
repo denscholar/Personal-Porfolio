@@ -81,3 +81,104 @@ div header .nav {
 .social-icons a img {
   padding: 10px;
 }
+
+.drop-down {
+  text-align: center;
+}
+
+.drop-down a .fas {
+  border: 1px solid #dfe1e6;
+  font-size: 20px;
+  color: black;
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.project-section .heading {
+  padding: 0 22px;
+  font-size: 40px;
+  color: #172b4d;
+  text-align: center;
+  line-height: 52px;
+  font-weight: 700;
+}
+
+.project-section hr {
+  margin: 0 auto;
+  background-color: #36b37e;
+  height: 4px;
+  width: 48px;
+  border-radius: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  align-items: center;
+  margin: 17px;
+}
+
+.container .card {
+  background: url(../images/calculator.png) center / cover no-repeat;
+  min-height: 474px;
+  position: relative;
+  border: 1px solid #d0d9d4;
+  border-radius: 8px;
+}
+
+.grid .project-title {
+  text-align: center;
+  padding: 16px;
+  font-weight: 600;
+  color: #3a4a42;
+  font-size: 24px;
+}
+
+.grid .language {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+.grid .language p {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  margin-left: 8px;
+  background-color: #ebf0ee;
+  color: #3a4a42;
+  padding: 10px;
+}
+
+.card .data {
+  background: white;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.card .data .content {
+  padding: 5px 0 24px 0;
+  position: relative;
+}
+
+#wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px;
+  font-size: 17px;
+  font-weight: 500;
+  background: #36b37f;
+  border-radius: 4px;
+  color: white;
+  border: none;
+}
