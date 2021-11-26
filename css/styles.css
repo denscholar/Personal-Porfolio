@@ -167,7 +167,26 @@ div header .nav {
   padding: 0 12px 30px 12px;
 }
 
-.grid .language p {
+.language ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.language li {
+  padding: 10px;
+  background-color: #EBF0EE;
+  margin: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  color: #3A4A42;
+}
+
+/* .grid .language p {
   font-size: 12px;
   font-weight: 600;
   text-align: center;
@@ -175,7 +194,7 @@ div header .nav {
   background-color: #ebf0ee;
   color: #3a4a42;
   padding: 10px;
-}
+} */
 
 .card .data {
   background: white;
