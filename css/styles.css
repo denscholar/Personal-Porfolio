@@ -177,24 +177,14 @@ div header .nav {
 
 .language li {
   padding: 10px;
-  background-color: #EBF0EE;
+  background-color: #ebf0ee;
   margin: 5px;
   border-radius: 4px;
   font-size: 12px;
   letter-spacing: 0.03em;
   font-weight: 600;
-  color: #3A4A42;
-}
-
-/* .grid .language p {
-  font-size: 12px;
-  font-weight: 600;
-  text-align: center;
-  margin-left: 8px;
-  background-color: #ebf0ee;
   color: #3a4a42;
-  padding: 10px;
-} */
+}
 
 .card .data {
   background: white;
