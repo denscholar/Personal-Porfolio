@@ -101,6 +101,7 @@ div header .nav {
   text-align: center;
   line-height: 52px;
   font-weight: 700;
+  margin-top: 20px;
 }
 
 .project-section hr {
@@ -109,6 +110,10 @@ div header .nav {
   height: 4px;
   width: 48px;
   border-radius: 24px;
+}
+
+.project-section .container {
+  margin-top: 70px;
 }
 
 .grid {
@@ -166,7 +171,7 @@ div header .nav {
   position: relative;
 }
 
-#wrapper {
+.wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,9 +207,11 @@ button {
   flex: 2;
   padding-left: 50px;
 }
+
 .img-content img {
   width: 50px;
 }
+
 .about-me p {
   font-size: 20px;
   color: #42526e;
@@ -222,6 +229,7 @@ button {
 .button-content button {
   text-align: center;
 }
+
 .button-content img {
   margin-right: 40px;
 }
