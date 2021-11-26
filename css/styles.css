@@ -73,9 +73,21 @@ div header .nav {
   padding: 0 24px;
 }
 
+.button-content img {
+  margin-right: 40px;
+}
+
 .social-icons {
   display: flex;
   justify-content: center;
+}
+
+.img-content img {
+  width: 50px;
+}
+
+.lib-card img {
+  margin-top: 20px;
 }
 
 .social-icons a img {
@@ -148,6 +160,13 @@ div header .nav {
   align-content: center;
 }
 
+.about-me p {
+  font-size: 20px;
+  color: #42526e;
+  font-weight: 400;
+  padding: 0 12px 30px 12px;
+}
+
 .grid .language p {
   font-size: 12px;
   font-weight: 600;
@@ -208,17 +227,6 @@ button {
   padding-left: 50px;
 }
 
-.img-content img {
-  width: 50px;
-}
-
-.about-me p {
-  font-size: 20px;
-  color: #42526e;
-  font-weight: 400;
-  padding: 0 12px 30px 12px;
-}
-
 .button-content {
   display: flex;
   justify-content: flex-start;
@@ -228,10 +236,6 @@ button {
 
 .button-content button {
   text-align: center;
-}
-
-.button-content img {
-  margin-right: 40px;
 }
 
 .lib-container {
@@ -249,10 +253,6 @@ button {
 .lib-container .lib-card {
   background: url("../images/Img_plaholder.png") center / cover no-repeat;
   min-height: 352px;
-}
-
-.lib-card img {
-  margin-top: 20px;
 }
 
 .lib-card h1 {
