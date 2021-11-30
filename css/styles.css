@@ -291,3 +291,32 @@ button {
   letter-spacing: 0.03em;
   font-weight: 600;
 }
+
+.form,
+.footer {
+  max-width: 375px;
+  margin: auto;
+}
+
+.form h2 {
+font-weight: bold;
+font-size: 40px;
+line-height: 52px;
+text-align: center;
+color: #172B4D;
+margin: 60px 24px 58px 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+form input,
+textarea {
+  background: #FFFFFF;
+  border: 1px solid #D0D9D4;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
