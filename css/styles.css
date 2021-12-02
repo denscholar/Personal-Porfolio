@@ -362,9 +362,8 @@ input[type="email"] {
 
 /* Animations and transitions */
 
-.hero-heading .title,
-#title,
-.description {
+.hero-heading h1,
+p {
   position: relative;
   animation-name: content;
   animation-duration: 2s;
@@ -374,6 +373,7 @@ input[type="email"] {
   0% {
     left: -500px;
   }
+
   100% {
     left: 0;
   }
