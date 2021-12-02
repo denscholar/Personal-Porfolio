@@ -296,7 +296,6 @@ button {
 
 .form-section {
   margin: 0 auto;
-  width: 375px;
   background: url("../images/footer-image.svg") 100% 95% no-repeat;
 }
 
@@ -363,10 +362,27 @@ input[type="email"] {
 
 /* Animations and transitions */
 
+.hero-heading .title,
+#title,
+.description {
+  position: relative;
+  animation-name: content;
+  animation-duration: 2s;
+}
+
+@keyframes content {
+  0% {
+    left: -500px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
 .social-icons li {
   transition: all 0.5s;
 }
 
 .social-icons li:hover {
-  transform: scale(1.1);
+  transform: scale(1.4);
 }
