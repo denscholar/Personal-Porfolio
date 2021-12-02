@@ -360,3 +360,13 @@ input[type="email"] {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+/* Animations and transitions */
+
+.social-icons li {
+  transition: all 0.5s;
+}
+
+.social-icons li:hover {
+  transform: scale(1.1);
+}
