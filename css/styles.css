@@ -73,6 +73,28 @@ section header .nav {
   padding: 0 24px;
 }
 
+.lib-card li {
+  padding: 10px;
+  background-color: white;
+  margin: 5px;
+  border-radius: 8px;
+  color: #36b37e;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+
+.language li {
+  padding: 10px;
+  background-color: #ebf0ee;
+  margin: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  color: #3a4a42;
+}
+
 /* Animations and transitions */
 
 .hero-heading h1,
@@ -202,17 +224,6 @@ p {
   flex-wrap: wrap;
 }
 
-.language li {
-  padding: 10px;
-  background-color: #ebf0ee;
-  margin: 5px;
-  border-radius: 4px;
-  font-size: 12px;
-  letter-spacing: 0.03em;
-  font-weight: 600;
-  color: #3a4a42;
-}
-
 .card .data {
   background: white;
   border-radius: 10px;
@@ -308,17 +319,6 @@ button {
   box-sizing: border-box;
 }
 
-.lib-card li {
-  padding: 10px;
-  background-color: white;
-  margin: 5px;
-  border-radius: 8px;
-  color: #36b37e;
-  font-size: 12px;
-  letter-spacing: 0.03em;
-  font-weight: 600;
-}
-
 /* Contact form section */
 
 .form-section {
@@ -386,4 +386,3 @@ input[type="email"] {
   border-radius: 4px;
   box-sizing: border-box;
 }
-
