@@ -73,6 +73,33 @@ section header .nav {
   padding: 0 24px;
 }
 
+/* Animations and transitions */
+
+.hero-heading h1,
+p {
+  position: relative;
+  animation-name: content;
+  animation-duration: 2s;
+}
+
+@keyframes content {
+  0% {
+    left: -500px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.social-icons li {
+  transition: all 0.5s;
+}
+
+.social-icons li:hover {
+  transform: scale(1.4);
+}
+
 .button-content img {
   margin-right: 40px;
 }
@@ -360,29 +387,3 @@ input[type="email"] {
   box-sizing: border-box;
 }
 
-/* Animations and transitions */
-
-.hero-heading h1,
-p {
-  position: relative;
-  animation-name: content;
-  animation-duration: 2s;
-}
-
-@keyframes content {
-  0% {
-    left: -500px;
-  }
-
-  100% {
-    left: 0;
-  }
-}
-
-.social-icons li {
-  transition: all 0.5s;
-}
-
-.social-icons li:hover {
-  transform: scale(1.4);
-}
