@@ -25,3 +25,4 @@ Download the ZIP from this location, or run the following git command to clone t
 
 ## Contributor
 #### Dennis Akagha
+#### Sahar Abdel Samad
