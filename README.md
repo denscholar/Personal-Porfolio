@@ -24,5 +24,6 @@ Download the ZIP from this location, or run the following git command to clone t
 * HTML
 
 ## Contributor
-#### Dennis Akagha
-#### Sahar Abdel Samad
+1. Dennis Akagha
+2. Sahar Abdel Samad
+3. Camilo Armijos
