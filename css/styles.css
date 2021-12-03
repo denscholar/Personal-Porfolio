@@ -22,6 +22,10 @@ header .nav a {
   color: #28352f;
 }
 
+.header ul {
+  display: none;
+}
+
 .nav .fas {
   font-size: 25px;
   color: #28352f;
@@ -40,7 +44,7 @@ section header .nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 900px 620px;
-  height: 35rem;
+  height: 38rem;
   padding-top: 20px;
 }
 
@@ -213,6 +217,7 @@ p {
   font-size: 20px;
   color: #42526e;
   font-weight: 400;
+  line-height: 32px;
   padding: 0 12px 30px 12px;
 }
 
@@ -321,12 +326,12 @@ button {
 
 /* Contact form section */
 
-.form-section {
+.form {
   margin: 0 auto;
-  background: url("../images/footer-image.svg") 100% 95% no-repeat;
+  background: url("../images/footer-image.svg") 100% 100% no-repeat;
 }
 
-.form-section h2 {
+.form h2 {
   font-weight: bold;
   font-size: 40px;
   line-height: 52px;
@@ -362,6 +367,10 @@ textarea {
   font-weight: 400;
 }
 
+footer {
+  height: 72px;
+}
+
 .footer-section p {
   font-size: 20px;
   font-weight: 400;
@@ -369,6 +378,7 @@ textarea {
   text-align: center;
   color: #42526e;
   padding-top: 10px;
+  height: 189px;
 }
 
 form .btn {
@@ -380,7 +390,12 @@ form .btn {
   padding: 12px;
 }
 
-input[type="text"],
+input[type="text"] {
+  height: 48px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 input[type="email"] {
   height: 48px;
   border-radius: 4px;
@@ -390,20 +405,178 @@ input[type="email"] {
 /* Media Queries */
 
 @media screen and (min-width: 992px) {
-  body{
+  body {
     background: url("../images/desktop-background.svg") no-repeat;
     background-size: 100% auto;
+    background-position: 100% -2%;
   }
-  .hero-heading{
-    padding: 100px 260px 0 260px;
+
+  .header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    margin: 0 auto;
   }
-  .hero-heading h1, #title{
+
+  .header li {
+    margin: 0 8px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #344563;
+  }
+
+  .hero-heading {
+    margin: 100px 260px 260px 260px;
+    background: none;
+    height: 10em;
+  }
+
+  .hero-heading h1,
+  #title {
     font-size: 48px;
     line-height: 60px;
     font-weight: 800;
     letter-spacing: 0.37px;
     text-align: center;
-    
-    
+  }
+
+  .drop-down {
+    height: 512px;
+  }
+
+  .project-section {
+    margin-bottom: 8em;
+  }
+
+  .container .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 30px;
+    margin: 0 142px;
+  }
+
+  .about-me h1 {
+    margin: 2em 0 1em 0;
+    text-align: center;
+    padding: 0;
+  }
+
+  .about-me p {
+    margin: 0 15em;
+  }
+
+  .img-content img {
+    display: none;
+  }
+
+  .button-content img {
+    display: none;
+  }
+
+  .about-me {
+    background: url("../images/about-me2-desktop.svg") 0% 80% no-repeat,
+      url("../images/about-me1-desktop.svg") 10% 0% no-repeat;
+  }
+
+  .button-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button-content button {
+    width: 159px;
+    padding: 12px;
+  }
+
+  .lib-container {
+    padding-top: 50px;
+  }
+
+  .lib-container .lib-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
+    margin: 0 142px;
+  }
+
+  .lib-card {
+    border-radius: 10px;
+    border: 1px solid #ebf0ee;
+    padding: 18px;
+    height: 375px;
+    width: 369px;
+  }
+
+  .lib-card li {
+    padding: 12px;
+  }
+
+  .form {
+    background: none;
+  }
+
+  .form {
+    background: url("../images/contact-form-img1.svg") 20% 100% no-repeat,
+      url("../images/contact-form-img2.svg") 0% 100% no-repeat,
+      url("../images/contact-form-img3.svg") 100% 0% no-repeat;
+    display: grid;
+    grid-template-columns: 9.65% 33% 1.7% 47% 9.65%;
+    grid-template-rows: 1fr;
+    padding-top: 7em;
+  }
+
+  .form h2 {
+    font-size: 30px;
+    text-align: start;
+    margin: 80px 0;
+    grid-column: 2;
+  }
+
+  form {
+    grid-column: 4;
+  }
+
+  textarea {
+    height: 114px;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    height: 48;
+    border-radius: 5px;
+  }
+
+  .footer {
+    height: 100%;
+  }
+
+  footer .divider {
+    width: 100%;
+    border: 1px solid #dfe1e6;
+    margin-top: 100px;
+  }
+
+  footer p {
+    display: none;
+  }
+
+  .form .btn {
+    padding: 12px;
+    width: 129px;
+    margin: 0;
+    height: 48px;
+  }
+
+  .social-icons li {
+    padding: 0;
+    margin: 0;
+  }
+
+  .header i {
+    display: none;
   }
 }
