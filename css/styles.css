@@ -483,8 +483,8 @@ input[type="email"] {
 
   .about-me {
     background:
-          url("../images/about-me2-desktop.svg") 0% 80% no-repeat,
-          url("../images/about-me1-desktop.svg") 10% 0% no-repeat;
+     url("../images/about-me2-desktop.svg") 0% 80% no-repeat,
+      url("../images/about-me1-desktop.svg") 10% 0% no-repeat;
   }
 
   .button-content {
