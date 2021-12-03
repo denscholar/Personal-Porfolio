@@ -73,6 +73,55 @@ section header .nav {
   padding: 0 24px;
 }
 
+.lib-card li {
+  padding: 10px;
+  background-color: white;
+  margin: 5px;
+  border-radius: 8px;
+  color: #36b37e;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+
+.language li {
+  padding: 10px;
+  background-color: #ebf0ee;
+  margin: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  color: #3a4a42;
+}
+
+/* Animations and transitions */
+
+.hero-heading h1,
+p {
+  position: relative;
+  animation-name: content;
+  animation-duration: 2s;
+}
+
+@keyframes content {
+  0% {
+    left: -500px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.social-icons li {
+  transition: all 0.5s;
+}
+
+.social-icons li:hover {
+  transform: scale(1.4);
+}
+
 .button-content img {
   margin-right: 40px;
 }
@@ -175,17 +224,6 @@ section header .nav {
   flex-wrap: wrap;
 }
 
-.language li {
-  padding: 10px;
-  background-color: #ebf0ee;
-  margin: 5px;
-  border-radius: 4px;
-  font-size: 12px;
-  letter-spacing: 0.03em;
-  font-weight: 600;
-  color: #3a4a42;
-}
-
 .card .data {
   background: white;
   border-radius: 10px;
@@ -281,22 +319,10 @@ button {
   box-sizing: border-box;
 }
 
-.lib-card li {
-  padding: 10px;
-  background-color: white;
-  margin: 5px;
-  border-radius: 8px;
-  color: #36b37e;
-  font-size: 12px;
-  letter-spacing: 0.03em;
-  font-weight: 600;
-}
-
 /* Contact form section */
 
 .form-section {
   margin: 0 auto;
-  width: 375px;
   background: url("../images/footer-image.svg") 100% 95% no-repeat;
 }
 
