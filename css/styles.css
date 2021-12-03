@@ -482,9 +482,9 @@ input[type="email"] {
   }
 
   .about-me {
-    background: 
+    background:
     url("../images/about-me2-desktop.svg") 0% 80% no-repeat,
-      url("../images/about-me1-desktop.svg") 10% 0% no-repeat;
+    url("../images/about-me1-desktop.svg") 10% 0% no-repeat;
   }
 
   .button-content {
@@ -523,8 +523,8 @@ input[type="email"] {
   .form {
     background: 
     url("../images/contact-form-img1.svg") 20% 100% no-repeat,
-      url("../images/contact-form-img2.svg") 0% 100% no-repeat,
-      url("../images/contact-form-img3.svg") 100% 0% no-repeat;
+    url("../images/contact-form-img2.svg") 0% 100% no-repeat,
+    url("../images/contact-form-img3.svg") 100% 0% no-repeat;
     display: grid;
     grid-template-columns: 9.65% 33% 1.7% 47% 9.65%;
     grid-template-rows: 1fr;
