@@ -6,6 +6,7 @@
   padding: 0;
   text-decoration: none;
   list-style-type: none;
+  box-sizing: border-box;
 }
 
 .header {
@@ -13,7 +14,6 @@
   display: flex;
   align-items: center;
   height: 80px;
-  box-sizing: border-box;
 }
 
 header .nav a {
@@ -385,4 +385,25 @@ input[type="email"] {
   height: 48px;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 992px) {
+  body{
+    background: url("../images/desktop-background.svg") no-repeat;
+    background-size: 100% auto;
+  }
+  .hero-heading{
+    padding: 100px 260px 0 260px;
+  }
+  .hero-heading h1, #title{
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 800;
+    letter-spacing: 0.37px;
+    text-align: center;
+    
+    
+  }
 }
