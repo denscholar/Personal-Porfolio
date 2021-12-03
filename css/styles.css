@@ -465,6 +465,10 @@ input[type="email"] {
     padding: 0;
   }
 
+  footer p {
+    display: none;
+  }
+
   .about-me p {
     margin: 0 15em;
   }
@@ -515,7 +519,7 @@ input[type="email"] {
     padding: 12px;
   }
 
-  .form {
+  section .form {
     background: none;
   }
 
@@ -546,7 +550,7 @@ input[type="email"] {
 
   input[type="text"],
   input[type="email"] {
-    height: 48;
+    height: 48px;
     border-radius: 5px;
   }
 
@@ -558,10 +562,6 @@ input[type="email"] {
     width: 100%;
     border: 1px solid #dfe1e6;
     margin-top: 100px;
-  }
-
-  footer p {
-    display: none;
   }
 
   .form .btn {
