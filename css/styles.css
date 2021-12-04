@@ -293,8 +293,6 @@ button {
 
 .library-container .card-item {
   background: url("../images/Img_plaholder.png") center / cover no-repeat;
-  height: 352px;
-  width: 369;
   border-radius: 12px;
   background-color: #ebf0ee;
   border: 1px solid #c1c7d0;
@@ -506,7 +504,11 @@ input[type="email"] {
   .library-container .card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
+    column-gap: 15px;
+  }
+
+  .card .frameworks {
+    margin: 12px;
   }
 
   .frameworks {
