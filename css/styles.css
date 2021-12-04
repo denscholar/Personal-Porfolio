@@ -507,12 +507,12 @@ input[type="email"] {
     column-gap: 15px;
   }
 
-  .card .frameworks {
-    margin: 12px;
-  }
-
   .frameworks {
     padding: 7px;
+  }
+
+  .card .frameworks {
+    margin: 12px;
   }
 
   .lib-card li {
