@@ -138,6 +138,7 @@ section header .nav {
 
 .drop-down {
   text-align: center;
+  
 }
 
 .drop-down a .fas {
@@ -398,7 +399,7 @@ input[type="email"] {
 
 /* Media Queries */
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1100px) {
   body {
     background: url("../images/desktop-background.svg") no-repeat;
     background-size: 100% auto;
@@ -510,7 +511,9 @@ input[type="email"] {
   .form {
     background: url("../images/contact-form-img1.svg") 30% 100% no-repeat, url("../images/contact-form-img2.svg") 0% 100% no-repeat, url("../images/contact-form-img3.svg") 100% 0% no-repeat;
     display: grid;
-    grid-template-columns: 16% 33% 1.7% 47% 9.65%;
+    grid-template-columns: 4.65% 32% 1.7% 47% 9.65%;
+    grid-template-rows: 1fr;
+    margin: auto;
     padding-top: 7em;
   }
 
@@ -519,7 +522,7 @@ input[type="email"] {
   }
 
   .form form {
-    margin-bottom: 10em;
+    margin-bottom: 12em;
   }
 
   section .form {
@@ -528,21 +531,24 @@ input[type="email"] {
 
   .form h2 {
     font-size: 25px;
-    text-align: start;
     margin: 80px 0;
     grid-column: 2;
-    text-align: center;
     line-height: 50px;
+    text-align: start;
   }
 
   textarea {
     height: 114px;
+    width: 658px;
+
   }
 
   input[type="text"],
   input[type="email"] {
     height: 48px;
     border-radius: 5px;
+    width: 658px;
+
   }
 
   .footer {
