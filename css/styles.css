@@ -77,17 +77,6 @@ section header .nav {
   padding: 0 24px;
 }
 
-.lib-card li {
-  padding: 10px;
-  background-color: white;
-  margin: 5px;
-  border-radius: 8px;
-  color: #36b37e;
-  font-size: 12px;
-  letter-spacing: 0.03em;
-  font-weight: 600;
-}
-
 .language li {
   padding: 10px;
   background-color: #ebf0ee;
@@ -101,8 +90,7 @@ section header .nav {
 
 /* Animations and transitions */
 
-.hero-heading h1,
-p {
+.hero-heading h1 {
   position: relative;
   animation-name: content;
   animation-duration: 2s;
@@ -137,10 +125,6 @@ p {
 
 .img-content img {
   width: 50px;
-}
-
-.lib-card img {
-  margin-top: 20px;
 }
 
 .social-icons a img {
@@ -290,38 +274,48 @@ button {
   text-align: center;
 }
 
-.lib-container {
-  text-align: center;
+/* Library - Framework - skill section */
+
+.library-container{
+  padding-top: 50px;
+  margin: 16px;
 }
 
-.lib-container .lib-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
-  align-items: center;
-  margin: 17px;
-}
-
-.lib-container .lib-card {
+.library-container .card-item{
   background: url("../images/Img_plaholder.png") center / cover no-repeat;
-  min-height: 352px;
+  height: 360px;
+  margin-top: 17px;
+  border-radius: 12px;
+  background-color: #EBF0EE;
 }
 
-.lib-card h1 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #344563;
-  margin-top: 10px;
-}
-
-.lib-card ul {
+.card-item .frameworks{
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 30px;
-  box-sizing: border-box;
+}
+
+.card-item img{
+  margin: 0 auto;
+  width: 100%;  
+}
+
+.frameworks p{
+  background-color: white;
+  margin: 5px 5px;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.card h2{
+  font-size: 24px;
+  color: #344563;
+  text-align: center;
+  line-height: 32px;
+  font-weight: 600;
+  margin: 24px 0;
 }
 
 /* Contact form section */
@@ -456,7 +450,7 @@ input[type="email"] {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     row-gap: 30px;
-    margin: 0 142px;
+    margin: 0 50px;
   }
 
   .about-me h1 {
@@ -470,7 +464,7 @@ input[type="email"] {
   }
 
   .about-me p {
-    margin: 0 15em;
+    margin: 0 8em;
   }
 
   .img-content img {
@@ -483,8 +477,8 @@ input[type="email"] {
 
   .about-me {
     background:
-      url("../images/about-me2-desktop.svg") 0% 80% no-repeat,
-      url("../images/about-me1-desktop.svg") 10% 0% no-repeat;
+      url("../images/about-me2-desktop.svg") -10% 100% no-repeat,
+      url("../images/about-me1-desktop.svg") 100% 0% no-repeat;
   }
 
   .button-content {
@@ -497,23 +491,18 @@ input[type="email"] {
     padding: 12px;
   }
 
-  .lib-container {
-    padding-top: 50px;
+  .library-container{
+    margin: 0 50px;
   }
 
-  .lib-container .lib-grid {
+  .library-container .card {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 30px;
-    margin: 0 142px;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
   }
 
-  .lib-card {
-    border-radius: 10px;
-    border: 1px solid #ebf0ee;
-    padding: 18px;
-    height: 375px;
-    width: 369px;
+  .frameworks{
+    padding: 7px;
   }
 
   .lib-card li {
@@ -521,11 +510,17 @@ input[type="email"] {
   }
 
   .form {
-    background: url("../images/contact-form-img1.svg") 20% 100% no-repeat, url("../images/contact-form-img2.svg") 0% 100% no-repeat, url("../images/contact-form-img3.svg") 100% 0% no-repeat;
+    background: 
+      url("../images/contact-form-img1.svg") 30% 100% no-repeat, 
+      url("../images/contact-form-img2.svg") 0% 100% no-repeat, 
+      url("../images/contact-form-img3.svg") 100% 0% no-repeat;
     display: grid;
-    grid-template-columns: 9.65% 33% 1.7% 47% 9.65%;
-    grid-template-rows: 1fr;
+    grid-template-columns: 16% 33% 1.7% 47% 9.65%;
     padding-top: 7em;
+  }
+
+  .form form{
+    margin-bottom: 10em;
   }
 
   section .form {
@@ -533,10 +528,12 @@ input[type="email"] {
   }
 
   .form h2 {
-    font-size: 30px;
+    font-size: 25px;
     text-align: start;
     margin: 80px 0;
     grid-column: 2;
+    text-align: center;
+    line-height: 50px;
   }
 
   form {
@@ -560,7 +557,6 @@ input[type="email"] {
   footer .divider {
     width: 100%;
     border: 1px solid #dfe1e6;
-    margin-top: 100px;
   }
 
   .form .btn {
