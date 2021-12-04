@@ -39,6 +39,12 @@ section header .nav {
   width: 100%;
 }
 
+.header nav li a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #344563;
+}
+
 .hero-heading {
   background: url("../images/mobile-background.svg");
   background-position: center;
@@ -128,8 +134,7 @@ section header .nav {
 }
 
 .card-item img {
-  margin: 0 auto;
-  width: 100%;
+  margin-top: 25px;
 }
 
 .social-icons a img {
@@ -283,15 +288,16 @@ button {
 
 .library-container {
   padding-top: 50px;
-  margin: 16px;
+  text-align: center;
 }
 
 .library-container .card-item {
   background: url("../images/Img_plaholder.png") center / cover no-repeat;
-  height: 360px;
-  margin-top: 17px;
+  height: 352px;
+  width: 369;
   border-radius: 12px;
   background-color: #ebf0ee;
+  border: 1px solid #c1c7d0;
 }
 
 .card-item .frameworks {
@@ -300,13 +306,17 @@ button {
   align-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin: 16px;
 }
 
 .frameworks p {
+  font-size: 12px;
   background-color: white;
-  margin: 5px 5px;
+  margin: 5px;
   border-radius: 8px;
-  padding: 8px;
+  padding: 10px;
+  color: #36b37e;
+  font-weight: 600;
 }
 
 .card h2 {
@@ -315,7 +325,7 @@ button {
   text-align: center;
   line-height: 32px;
   font-weight: 600;
-  margin: 24px 0;
+  margin: 0 0 15px 0;
 }
 
 /* Contact form section */
@@ -398,7 +408,7 @@ input[type="email"] {
 
 /* Media Queries */
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 992px) {
   body {
     background: url("../images/desktop-background.svg") no-repeat;
     background-size: 100% auto;
@@ -569,7 +579,8 @@ input[type="email"] {
     margin: 0;
   }
 
-  .header i {
+  .header i,
+  .logo {
     display: none;
   }
 }
