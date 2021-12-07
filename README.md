@@ -22,8 +22,10 @@ Download the ZIP from this location, or run the following git command to clone t
 ## Technologies Used
 * CSS
 * HTML
+* GitHub
 
 ## Contributor
+Below are the following contributors to this project for the time being:
 1. Dennis Akagha
 2. Sahar Abdel Samad
 3. Camilo Armijos
