@@ -27,13 +27,23 @@
   <header class="header">
     <nav class="nav">
       <a class="logo" href="">Welcome</a>
-      <button>
+      <button type="button" class="btn-menu">
         <i class="fas fa-bars"></i>
       </button>
-      <ul>
+      <ul class="menu-desktop">
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="menu-bar hidden">
+      <button type="button" class="btn-close">
+        <img src="./images/Icon-Cancel.svg" alt="cancel button">
+      </button>
+      <ul>
+        <li>Portfolio</li>
+        <li>About</li>
+        <li>Contact</li>
       </ul>
     </nav>
   </header>
@@ -284,6 +294,7 @@
     <p class="email-address">d.akagha20@gmail.com</p>
     <p class="footer-line"></p>
   </footer>
+  <script src="index.js"></script>
 </body>
 
 </html>
