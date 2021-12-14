@@ -25,13 +25,27 @@
 
 <body>
   <header class="header">
+    <!-- desktop menu -->
     <nav class="nav">
       <a class="logo" href="">Welcome</a>
-      <i class="fas fa-bars"></i>
-      <ul>
+      <button type="button" class="btn-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="menu-desktop" >
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- mobile menu -->
+    <nav class="menu-bar hidden" id="mobile-menu-bar">
+      <button type="button" class="btn-close">
+        <img src="./images/Icon-Cancel.svg" alt="cancel button">
+      </button>
+      <ul>
+        <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -282,6 +296,7 @@
     <p class="email-address">d.akagha20@gmail.com</p>
     <p class="footer-line"></p>
   </footer>
+  <script src="index.js"></script>
 </body>
 
 </html>

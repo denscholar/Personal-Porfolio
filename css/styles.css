@@ -22,8 +22,62 @@ header .nav a {
   color: #28352f;
 }
 
-.header ul {
+.menu-desktop {
   display: none;
+}
+
+.menu-bar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0%;
+  right: 0%;
+  width: 100%;
+  z-index: 10;
+  background-color: white;
+  height: 100%;
+}
+
+.menu-bar .nav-link {
+  font-size: 32px;
+  padding: 24px 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-close {
+  display: block;
+  width: 50px;
+  align-self: flex-end;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 0.125em;
+  background: #fff;
+  cursor: pointer;
+}
+
+.language li {
+  padding: 10px;
+  background-color: #ebf0ee;
+  margin: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  color: #3a4a42;
+}
+
+.social-icons li {
+  transition: all 0.5s;
+}
+
+.menu-bar > ul > li {
+  font-size: 32px;
+  font-weight: 600;
+  color: #3a4a42;
+  margin-top: 40px;
 }
 
 .nav .fas {
@@ -83,17 +137,6 @@ header .nav {
   padding: 0 24px;
 }
 
-.language li {
-  padding: 10px;
-  background-color: #ebf0ee;
-  margin: 5px;
-  border-radius: 4px;
-  font-size: 12px;
-  letter-spacing: 0.03em;
-  font-weight: 600;
-  color: #3a4a42;
-}
-
 /* Animations and transitions */
 
 .hero-heading h1 {
@@ -110,10 +153,6 @@ header .nav {
   100% {
     left: 0;
   }
-}
-
-.social-icons li {
-  transition: all 0.5s;
 }
 
 .social-icons li:hover {
@@ -415,14 +454,14 @@ input[type="email"] {
 
 /* Media Queries */
 
-@media screen and (min-width: 992px) {
+@media (min-width: 992px) {
   body {
     background: url("../images/desktop-background.svg") no-repeat;
     background-size: 100% auto;
     background-position: 100% -2%;
   }
 
-  .header ul {
+  .menu-desktop {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -431,7 +470,7 @@ input[type="email"] {
     margin: 0 auto;
   }
 
-  .header li {
+  .menu-desktop li {
     margin: 0 8px;
     font-size: 15px;
     line-height: 20px;
@@ -591,7 +630,7 @@ input[type="email"] {
     margin: 0;
   }
 
-  .header i,
+  .btn-menu,
   .logo {
     display: none;
   }
@@ -601,6 +640,10 @@ input[type="email"] {
   }
 
   .footer-line {
+    display: none;
+  }
+
+  .hidden {
     display: none;
   }
 }
