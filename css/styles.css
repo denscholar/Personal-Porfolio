@@ -32,13 +32,13 @@ header .nav a {
   flex-direction: column;
   top: 0%;
   right: 0%;
-  width: 375px;
+  width: 100%;
   height: 820px;
   z-index: 10;
   background-color: white;
 }
 
-.menu-bar .mobile-nav {
+.menu-bar .nav-link {
   font-size: 32px;
   padding: 24px 30px;
 }
@@ -640,6 +640,10 @@ input[type="email"] {
   }
 
   .footer-line {
+    display: none;
+  }
+
+  .hidden {
     display: none;
   }
 }
