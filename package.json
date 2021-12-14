@@ -1,0 +1,33 @@
+{
+  "name": "personal-porfolio",
+  "version": "1.0.0",
+  "description": "This portfolio responsive website will do nothing technical aside navigating users to the various projects abd diplay option for live project and sourch code. Find below the mobile view of the website below:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denscholar/Personal-Porfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denscholar/Personal-Porfolio/issues"
+  },
+  "homepage": "https://github.com/denscholar/Personal-Porfolio#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.3",
+    "hint": "^6.1.9",
+    "install": "^0.13.0",
+    "npm": "^8.3.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  }
+}
