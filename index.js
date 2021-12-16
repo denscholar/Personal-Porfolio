@@ -4,7 +4,7 @@ const btnMenu = document.querySelector('.btn-menu'); // button for the desktop m
 const navLink = document.querySelectorAll('#mobile-menu-bar li .nav-link');
 const tog = document.getElementsByClassName('toggle');
 const togg = Array.from(tog); // convert the nodelist to an array
-let popupMenu = document.createElement('div');
+const popupMenu = document.createElement('div'); // create an empty element
 
 btnClose.addEventListener('click', () => {
   if (menuBar.style.display === 'flex') {
@@ -28,86 +28,71 @@ navLink.forEach((link) => {
   });
 });
 
-// togg.forEach((item, index) => {
-//   console.log(index);
-//   item.addEventListener('click', () => {
-//     toggle.classList.toggle('active');
-//   });
-// });
-
-// storing my data to local storage
-// name
-// description
-// featured image
-// technologies
-// link to live version
-// link to source
-
 const projects = [
   {
-    projectImage: 'images/work-screenshots/Bankist.PNG',
-    projectName: 'Bankist App press',
-    technologies: ['javaScript', 'Css', 'Html'],
+    projectImage: './images/calculator-project.jpg',
+    projectName: 'Web Calculator Project',
+    technologies: ['javaScript', 'CSS', 'HTML', 'Ruby'],
     description:
-      'A beautiful website with a lot of different components and visual effects that require some pretty advanced DOM manipulation techniques',
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with',
     links: [
-      'https://bondok6.github.io/Bankist/',
-      'https://github.com/Bondok6/Bankist',
+      'https://www.google.com/',
+      'https://www.google.com/',
     ],
   },
   {
-    projectImage: 'images/work-screenshots/Bankist.PNG',
-    projectName: 'Bankist App',
-    technologies: ['javaScript', 'Css', 'Html'],
+    projectImage: './images/bank-app.jpg',
+    projectName: 'Mobile Banking Application',
+    technologies: ['javaScript', 'HTML', 'Ruby on rails', 'CSS'],
     description:
-      'A beautiful website with a lot of different components and visual effects that require some pretty advanced DOM manipulation techniques',
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.',
     links: [
-      'https://bondok6.github.io/Bankist/',
-      'https://github.com/Bondok6/Bankist',
+      'https://www.google.com/',
+      'https://www.google.com/',
     ],
   },
   {
-    projectImage: 'images/work-screenshots/Bankist.PNG',
-    projectName: 'Bankist App',
-    technologies: ['javaScript', 'Css', 'Html'],
+    projectImage: './images/Blood-Bank-Management-System-Android-Project.webp',
+    projectName: 'Blood Bank Mgt app',
+    technologies: ['javaScript', 'HTML', 'Ruby on rails', 'CSS'],
     description:
-      'A beautiful website with a lot of different components and visual effects that require some pretty advanced DOM manipulation techniques',
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.',
     links: [
-      'https://bondok6.github.io/Bankist/',
-      'https://github.com/Bondok6/Bankist',
+      'https://www.google.com//',
+      'https://www.google.com/',
     ],
   },
   {
-    projectImage: 'images/work-screenshots/Bankist.PNG',
-    projectName: 'Bankist App',
-    technologies: ['javaScript', 'Css', 'Html'],
+    projectImage: './images/calculator-project.jpg',
+    projectName: 'Web Calculator Project',
+    technologies: ['javaScript', 'Css', 'Html', 'Ruby'],
     description:
-      'A beautiful website with a lot of different components and visual effects that require some pretty advanced DOM manipulation techniques',
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.',
     links: [
-      'https://bondok6.github.io/Bankist/',
-      'https://github.com/Bondok6/Bankist',
+      'https://www.google.com/',
+      'https://www.google.com/',
     ],
   },
   {
-    projectImage: 'images/work-screenshots/Bankist.PNG',
-    projectName: 'Bankist App',
-    technologies: ['javaScript', 'Css', 'Html'],
+    projectImage: './images/bank-app.jpg',
+    projectName: 'Mobile Banking Application',
+    technologies: ['javaScript', 'HTML', 'Ruby on rails', 'CSS'],
     description:
-      'A beautiful website with a lot of different components and visual effects that require some pretty advanced DOM manipulation techniques',
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.',
     links: [
-      'https://bondok6.github.io/Bankist/',
-      'https://github.com/Bondok6/Bankist',
+      'https://www.google.com/',
+      'https://www.google.com/',
     ],
   },
   {
-    projectImage: 'images/work-screenshots/Bankist.PNG',
-    projectName: 'Bankist App',
-    technologies: ['javaScript', 'Css', 'Html'],
+    projectImage: './images/Blood-Bank-Management-System-Android-Project.webp',
+    projectName: 'Blood Bank Mgt app',
+    technologies: ['javaScript', 'HTML', 'Ruby on rails', 'CSS'],
     description:
-      'A beautiful website with a lot of different components and visual effects that require some pretty advanced DOM manipulation techniques',
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.',
     links: [
-      'https://bondok6.github.io/Bankist/',
-      'https://github.com/Bondok6/Bankist',
+      'https://www.google.com//',
+      'https://www.google.com/',
     ],
   },
 ];
@@ -116,8 +101,10 @@ function callPop(index) {
   const popUp = `<div class="popup toggle" id="popup-1">
   <div class="overlay"></div>
   <div class="content">
-    <div class="close-btn">&times;</div>
-    <img src="./images/bg.svg" alt="close-btn" />
+  <button type="button" class="btn-close-details">
+  <img src="./images/Icon-Cancel.svg" alt="cancel icon">
+</button>
+    <img src="${projects[index].projectImage}" />
     <div class="pop-container">
       <div class="pop-item">
         <h2>${projects[index].projectName}</h2>
@@ -130,14 +117,10 @@ function callPop(index) {
         ${projects[index].description}
         </p>
       </div>
-      <div class="pop-item btn-popup">
-        <a href=${projects[index].links[0]} type="button"
-          >See Live<img src="./images/see-live.svg" alt="see-live-icon"
-        /></a>
-        <a href=${projects[index].links[1]} type="button"
-          >See Demo<img src="./images/git-img.svg" alt="git icon"
-        /></a>
-      </div>
+      <div class="card-button-mobile pop-item btn-popup">
+                <a href=${projects[index].links[0]} class="btn-card-details-mobile" >See Live <i class="fas fa-external-link-alt"></i></a>
+              <a href=${projects[index].links[1]} class="btn-card-details-mobile">See Source<i class="fab fa-github"></i></a>
+            </div>
     </div>
   </div>
 </div>`;
@@ -151,7 +134,10 @@ for (let i = 0; i < togg.length; i++) {
     popupMenu.innerHTML = callPop(i);
     document.body.appendChild(popupMenu);
     const toggle = document.getElementById('popup-1');
-    console.log(toggle);
     toggle.classList.toggle('active');
+    const cancelIcon = document.querySelector('.btn-close-details');
+    cancelIcon.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+    });
   });
 }

@@ -214,6 +214,13 @@ header .nav {
   margin-top: 70px;
 }
 
+.project-section img{
+  width: 327px;
+  object-fit: fill;
+  height: 187px;
+  border-radius: 8px 8px 0 0;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -223,11 +230,10 @@ header .nav {
 }
 
 .container .card {
-  background: url(../images/plaholder.png) center / cover no-repeat;
-  min-height: 474px;
+  min-height: 400px;
   position: relative;
   border: 1px solid #d0d9d4;
-  border-radius: 8px;
+  border-radius: 0 0 8px 8px;
 }
 
 .grid .project-title {
@@ -273,6 +279,7 @@ header .nav {
 .card .data .content {
   padding: 5px 0 24px 0;
   position: relative;
+  min-height: 222px;
 }
 
 .wrapper {
@@ -452,91 +459,7 @@ input[type="email"] {
   margin: 134px auto 8px;
 }
 
-/* pop up screen */
-#popup-1{
-  background-color: black;
-  margin: 200px;
-}
-.popup .content{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  background: white;
-  width: 100%;
-  height: 700px;
-  z-index: 2;
-  padding: 20px;
-  border: 1px solid black;
-}
 
-.popup .content img{
-  width: 100%;
-  height: 15em;
-}
-.popup .close-btn{
-  position: absolute;
-  right: 37px;
-  top: 35px;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  color: white;
-  font-size: 40px;
-  font-weight: 100;
-  line-height: 30px;
-  text-align: center;
-}
-.popup.active .overlay{
-  display: block;
-}
-.popup.active .content{
-  transition: 300ms ease-in-out;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.pop-item h2 {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 44px;
-  color: #172b4d;
-  margin: 8px 0;
-}
-
-.pop-item ul {
-  display: flex;
-} 
-
-.pop-item li {
-  font-weight: 600;
-  color: #3a4a42;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 8px 15px;
-  background: #ebf0ee;
-  border-radius: 4px;
-  margin-right: 10px;
-}
-
-.pop-item p {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  color: #344563;
-  margin: 12px 0px;
-}
-.pop-item a{
-  margin-left: 10px;
-}
-
-.popup.active .overlay {
-  display: block;
-}
 
 /* Media Queries */
 
