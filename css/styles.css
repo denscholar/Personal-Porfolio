@@ -475,7 +475,22 @@ input[type='email'] {
   margin: 134px auto 8px;
 }
 
-/* Media Queries */
+.contact-form small {
+  color: red;
+  font-size: 18px;
+  font-weight: 500;
+  visibility: hidden;
+}
+
+form.success input {
+  border: 2px solid rgb(102, 209, 138);
+}
+
+form.error input {
+  border: 2px solid rgb(255, 0, 0);
+}
+
+/* ========================= Media Queries ================================ */
 
 @media (min-width: 992px) {
   body {

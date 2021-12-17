@@ -15,6 +15,10 @@
   padding: 10px;
 }
 
+.popup {
+  background-color: #172b4d;
+}
+
 .popup.active .content {
   transition: 300ms ease-in-out;
   transform: translate(-50%, -50%) scale(1);

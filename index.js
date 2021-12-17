@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const menuBar = document.querySelector('.menu-bar'); // mobile menu container
 const btnClose = document.querySelector('.btn-close'); // button for mobile menu
 const btnMenu = document.querySelector('.btn-menu'); // button for the desktop menu
@@ -5,6 +6,31 @@ const navLink = document.querySelectorAll('#mobile-menu-bar li .nav-link');
 const tog = document.getElementsByClassName('toggle');
 const togg = Array.from(tog); // convert the nodelist to an array
 const popupMenu = document.createElement('div'); // create an empty element
+const errMessage = document.querySelector('small');
+const email = document.querySelector('.email');
+// const submitBtn = document.querySelector('.btn');
+const element = email.parentElement;
+const x = element.querySelector('small');
+const form = document.querySelector('.form-input');
+const [fullName, firstName, lastName] = form.elements;
+
+const mediaqueryList = window.matchMedia('(max-width: 768px)');
+
+const screenTest = (e) => {
+  if (e.matches) {
+    fullName.required = true;
+    firstName.required = false;
+    lastName.required = false;
+  } else {
+    fullName.removeAttribute('required');
+    firstName.required = true;
+    lastName.required = true;
+  }
+};
+
+screenTest(mediaqueryList);
+
+mediaqueryList.addListener(screenTest);
 
 btnClose.addEventListener('click', () => {
   if (menuBar.style.display === 'flex') {
@@ -34,66 +60,48 @@ const projects = [
     projectName: 'Web Calculator Project',
     technologies: ['javaScript', 'CSS', 'HTML', 'Ruby'],
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with',
-    links: [
-      'https://www.google.com/',
-      'https://www.google.com/',
-    ],
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with",
+    links: ['https://www.google.com/', 'https://www.google.com/'],
   },
   {
     projectImage: './images/bank-app.jpg',
     projectName: 'Mobile Banking Application',
     technologies: ['javaScript', 'HTML', 'Ruby on rails', 'CSS'],
     description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.',
-    links: [
-      'https://www.google.com/',
-      'https://www.google.com/',
-    ],
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.",
+    links: ['https://www.google.com/', 'https://www.google.com/'],
   },
   {
     projectImage: './images/Blood-Bank-Management-System-Android-Project.webp',
     projectName: 'Blood Bank Mgt app',
     technologies: ['javaScript', 'HTML', 'Ruby on rails', 'CSS'],
     description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.',
-    links: [
-      'https://www.google.com//',
-      'https://www.google.com/',
-    ],
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.",
+    links: ['https://www.google.com//', 'https://www.google.com/'],
   },
   {
     projectImage: './images/calculator-project.jpg',
     projectName: 'Web Calculator Project',
     technologies: ['javaScript', 'Css', 'Html', 'Ruby'],
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.',
-    links: [
-      'https://www.google.com/',
-      'https://www.google.com/',
-    ],
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.",
+    links: ['https://www.google.com/', 'https://www.google.com/'],
   },
   {
     projectImage: './images/bank-app.jpg',
     projectName: 'Mobile Banking Application',
     technologies: ['javaScript', 'HTML', 'Ruby on rails', 'CSS'],
     description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.',
-    links: [
-      'https://www.google.com/',
-      'https://www.google.com/',
-    ],
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.",
+    links: ['https://www.google.com/', 'https://www.google.com/'],
   },
   {
     projectImage: './images/Blood-Bank-Management-System-Android-Project.webp',
     projectName: 'Blood Bank Mgt app',
     technologies: ['javaScript', 'HTML', 'Ruby on rails', 'CSS'],
     description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.',
-    links: [
-      'https://www.google.com//',
-      'https://www.google.com/',
-    ],
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.",
+    links: ['https://www.google.com//', 'https://www.google.com/'],
   },
 ];
 
@@ -143,3 +151,33 @@ for (let i = 0; i < togg.length; i++) {
     });
   });
 }
+
+// Form Validation
+function onSuccess() {
+  errMessage.style.visibility = 'hidden';
+  errMessage.innerText = '';
+  element.classList.add('success');
+  element.classList.remove('error');
+}
+
+function onError(input) {
+  errMessage.style.visibility = 'visible';
+  errMessage.innerText = input;
+  element.classList.add('error');
+  element.classList.remove('success');
+}
+
+const regex = new RegExp('[A-Z]');
+function formValidate() {
+  if (regex.test(email.value)) {
+    onError('Please set the email in lower case');
+  } else {
+    onSuccess();
+    form.submit();
+  }
+}
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  formValidate();
+});
