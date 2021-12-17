@@ -8,9 +8,29 @@ const togg = Array.from(tog); // convert the nodelist to an array
 const popupMenu = document.createElement('div'); // create an empty element
 const errMessage = document.querySelector('small');
 const email = document.querySelector('.email');
-const submitBtn = document.querySelector('.btn');
+// const submitBtn = document.querySelector('.btn');
 const element = email.parentElement;
 const x = element.querySelector('small');
+const form = document.querySelector('.form-input');
+const [fullName, firstName, lastName] = form.elements;
+
+const mediaqueryList = window.matchMedia('(max-width: 768px)');
+
+const screenTest = (e) => {
+  if (e.matches) {
+    fullName.required = true;
+    firstName.required = false;
+    lastName.required = false;
+  } else {
+    fullName.removeAttribute('required');
+    firstName.required = true;
+    lastName.required = true;
+  }
+};
+
+screenTest(mediaqueryList);
+
+mediaqueryList.addListener(screenTest);
 
 btnClose.addEventListener('click', () => {
   if (menuBar.style.display === 'flex') {
@@ -40,66 +60,48 @@ const projects = [
     projectName: 'Web Calculator Project',
     technologies: ['javaScript', 'CSS', 'HTML', 'Ruby'],
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with',
-    links: [
-      'https://www.google.com/',
-      'https://www.google.com/',
-    ],
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with",
+    links: ['https://www.google.com/', 'https://www.google.com/'],
   },
   {
     projectImage: './images/bank-app.jpg',
     projectName: 'Mobile Banking Application',
     technologies: ['javaScript', 'HTML', 'Ruby on rails', 'CSS'],
     description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.',
-    links: [
-      'https://www.google.com/',
-      'https://www.google.com/',
-    ],
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.",
+    links: ['https://www.google.com/', 'https://www.google.com/'],
   },
   {
     projectImage: './images/Blood-Bank-Management-System-Android-Project.webp',
     projectName: 'Blood Bank Mgt app',
     technologies: ['javaScript', 'HTML', 'Ruby on rails', 'CSS'],
     description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.',
-    links: [
-      'https://www.google.com//',
-      'https://www.google.com/',
-    ],
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.",
+    links: ['https://www.google.com//', 'https://www.google.com/'],
   },
   {
     projectImage: './images/calculator-project.jpg',
     projectName: 'Web Calculator Project',
     technologies: ['javaScript', 'Css', 'Html', 'Ruby'],
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.',
-    links: [
-      'https://www.google.com/',
-      'https://www.google.com/',
-    ],
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.",
+    links: ['https://www.google.com/', 'https://www.google.com/'],
   },
   {
     projectImage: './images/bank-app.jpg',
     projectName: 'Mobile Banking Application',
     technologies: ['javaScript', 'HTML', 'Ruby on rails', 'CSS'],
     description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.',
-    links: [
-      'https://www.google.com/',
-      'https://www.google.com/',
-    ],
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.",
+    links: ['https://www.google.com/', 'https://www.google.com/'],
   },
   {
     projectImage: './images/Blood-Bank-Management-System-Android-Project.webp',
     projectName: 'Blood Bank Mgt app',
     technologies: ['javaScript', 'HTML', 'Ruby on rails', 'CSS'],
     description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.',
-    links: [
-      'https://www.google.com//',
-      'https://www.google.com/',
-    ],
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with.",
+    links: ['https://www.google.com//', 'https://www.google.com/'],
   },
 ];
 
@@ -167,13 +169,15 @@ function onError(input) {
 
 const regex = new RegExp('[A-Z]');
 function formValidate() {
-  if (regex.test(email.value.trim())) {
-    onError('This is an error message');
+  if (regex.test(email.value)) {
+    onError('Please set the email in lower case');
   } else {
     onSuccess();
+    form.submit();
   }
 }
 
-submitBtn.addEventListener('click', (e) => {
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
   formValidate();
 });
