@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,13 +15,13 @@
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag('js', new Date());
+    gtag("js", new Date());
 
-    gtag('config', 'UA-214526377-1');
+    gtag("config", "UA-214526377-1");
   </script>
+  <link rel="stylesheet" href="./css/pop.css">
   <link rel="stylesheet" href="./css/styles.css" />
   <title>Dennis's Portfolio</title>
-
 </head>
 
 <body>
@@ -31,7 +32,7 @@
       <button type="button" class="btn-menu">
         <i class="fas fa-bars"></i>
       </button>
-      <ul class="menu-desktop" >
+      <ul class="menu-desktop">
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -40,7 +41,7 @@
     <!-- mobile menu -->
     <nav class="menu-bar hidden" id="mobile-menu-bar">
       <button type="button" class="btn-close">
-        <img src="./images/Icon-Cancel.svg" alt="cancel button">
+        <img src="./images/Icon-Cancel.svg" alt="cancel button" />
       </button>
       <ul>
         <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
@@ -82,15 +83,20 @@
   </section>
 
   <!-- Most Recent Work Section -->
+
+  <!-- recent work -->
   <section class="project-section" id="portfolio">
     <h2 class="heading" id="recent-work">My Recent Works</h2>
     <hr />
     <div class="container">
       <div class="grid">
         <div class="card">
+          <div class="work-card-img">
+            <img src="./images/calculator-project.jpg" alt="calculator-project-image">
+          </div>
           <div class="data">
             <div class="content">
-              <h3 class="project-title">Multiiii-Post-Stories Gain+Glory</h3>
+              <h3 class="project-title">Web Calculator Project</h3>
               <div class="language">
                 <ul>
                   <li>JavaScript</li>
@@ -100,16 +106,19 @@
                 </ul>
               </div>
               <div class="wrapper">
-                <button type="button">See Project</button>
+                <button class="toggle" type="button">See Project</button>
               </div>
             </div>
           </div>
         </div>
 
         <div class="card">
+          <div class="work-card-img">
+            <img src="./images/bank-app.jpg" alt="calculator-project-image">
+          </div>
           <div class="data">
             <div class="content">
-              <h3 class="project-title">Multiiii-Post-Stories Gain+Glory</h3>
+              <h3 class="project-title">Mobile Banking App</h3>
               <div class="language">
                 <ul>
                   <li>JavaScript</li>
@@ -119,16 +128,19 @@
                 </ul>
               </div>
               <div class="wrapper">
-                <button type="button">See Project</button>
+                <button class="toggle" type="button">See Project</button>
               </div>
             </div>
           </div>
         </div>
 
         <div class="card">
+          <div class="work-card-img">
+            <img src="./images/Blood-Bank-Management-System-Android-Project.webp" alt="calculator-project-image">
+          </div>
           <div class="data">
             <div class="content">
-              <h3 class="project-title">Multiiii-Post-Stories Gain+Glory</h3>
+              <h3 class="project-title">Blood Bank Mgt app</h3>
               <div class="language">
                 <ul>
                   <li>JavaScript</li>
@@ -138,13 +150,16 @@
                 </ul>
               </div>
               <div class="wrapper">
-                <button type="button">See Project</button>
+                <button class="toggle" type="button">See Project</button>
               </div>
             </div>
           </div>
         </div>
 
         <div class="card">
+          <div class="work-card-img">
+            <img src="./images/calculator-project.jpg" alt="calculator-project-image">
+          </div>
           <div class="data">
             <div class="content">
               <h3 class="project-title">Multiiii-Post-Stories Gain+Glory</h3>
@@ -157,13 +172,16 @@
                 </ul>
               </div>
               <div class="wrapper">
-                <button type="button">See Project</button>
+                <button class="toggle" type="button">See Project</button>
               </div>
             </div>
           </div>
         </div>
 
         <div class="card">
+          <div class="work-card-img">
+            <img src="./images/bank-app.jpg" alt="calculator-project-image">
+          </div>
           <div class="data">
             <div class="content">
               <h3 class="project-title">Multiiii-Post-Stories Gain+Glory</h3>
@@ -176,13 +194,16 @@
                 </ul>
               </div>
               <div class="wrapper">
-                <button type="button">See Project</button>
+                <button class="toggle" type="button">See Project</button>
               </div>
             </div>
           </div>
         </div>
 
         <div class="card">
+          <div class="work-card-img">
+            <img src="./images/Blood-Bank-Management-System-Android-Project.webp" alt="calculator-project-image">
+          </div>
           <div class="data">
             <div class="content">
               <h3 class="project-title">Multiiii-Post-Stories Gain+Glory</h3>
@@ -195,7 +216,7 @@
                 </ul>
               </div>
               <div class="wrapper">
-                <button type="button">See Project</button>
+                <button class="toggle" type="button">See Project</button>
               </div>
             </div>
           </div>
@@ -259,17 +280,23 @@
     </ul>
   </section>
   <!-- Form section -->
-  <section class="form" id="contact">
-    <p>
-      I'm always interested in hearing about new projects, so if you'd like to
-      chat please get in touch.
-    </p>
-    <form action="https://formspree.io/f/xlezroow" method="POST">
-      <input type="text" placeholder="Full name" maxlength="30" name="fullname" required />
-      <input type="email" placeholder="Email address" name="email" required />
-      <textarea name="msg" placeholder="Enter text here" maxlength="500" required></textarea>
-      <button class="btn" type="submit">Get in touch</button>
-    </form>
+  <section class="contact-form" id="contact">
+    <div class="container-form">
+      <h1>
+        I'm always interested in hearing about new projects, so if you'd like to
+        chat please get in touch.
+      </h1>
+      <form action="https://formspree.io/f/xlezroow" method="POST">
+        <input class="input-full-name" type="text" placeholder="Full name" maxlength="30" name="fullname" required />
+        <div class="input-couple-names">
+          <input type="text" placeholder="First Name" maxlength="30" name="name" required>
+          <input type="text" placeholder="Last Name" maxlength="30" name="last-name" required>
+        </div>
+        <input type="email" placeholder="Email address" name="email" required />
+        <textarea name="msg" placeholder="Enter text here" maxlength="500" required></textarea>
+        <button class="btn" type="submit">Get in touch</button>
+      </form>
+    </div>
   </section>
 
   <!-- footer section -->
@@ -296,7 +323,9 @@
     <p class="email-address">d.akagha20@gmail.com</p>
     <p class="footer-line"></p>
   </footer>
-  <script src="index.js"></script>
+  <script src="index.js">
+
+  </script>
 </body>
 
 </html>
