@@ -98,32 +98,34 @@ const projects = [
 ];
 
 function callPop(index) {
-  const popUp = `<div class="popup toggle" id="popup-1">
-  <div class="overlay"></div>
+  const popUp = `<section class="popup toggle" id="popup-1">
   <div class="content">
-  <button type="button" class="btn-close-details">
-  <img src="./images/Icon-Cancel.svg" alt="cancel icon">
-</button>
-    <img src="${projects[index].projectImage}" />
-    <div class="pop-container">
-      <div class="pop-item">
-        <h2>${projects[index].projectName}</h2>
-        <ul>
-          <li>${projects[index].technologies[0]}</li>
-          <li>${projects[index].technologies[1]}</li>
-          <li>${projects[index].technologies[2]}</li>
+      <button type="button" class="btn-close-details">
+          <img src="./images/Icon-Cancel.svg" alt="cancel icon" />
+        </button>
+        <div class="project-image">
+          <img src="${projects[index].projectImage}" alt="a guy with a backpack in mountain" />
+        </div>
+        <h2 class="project-title">${projects[index].projectName}</h2>
+        <ul class="proj-language-list">
+          <li class="list-items">${projects[index].technologies[0]}</li>
+          <li class="list-items">${projects[index].technologies[1]}</li>
+          <li class="list-items">${projects[index].technologies[2]}</li>
         </ul>
-        <p>
-        ${projects[index].description}
+        <p class="project-description">
+          ${projects[index].description}
         </p>
-      </div>
-      <div class="card-button-mobile pop-item btn-popup">
-                <a href=${projects[index].links[0]} class="btn-card-details-mobile" >See Live <i class="fas fa-external-link-alt"></i></a>
-              <a href=${projects[index].links[1]} class="btn-card-details-mobile">See Source<i class="fab fa-github"></i></a>
-            </div>
-    </div>
+        <div class="card-button-mobile pop-item btn-popup">
+          <a href="${projects[index].links[0]}" class="btn-card-details-mobile"
+            >See Live <img src="./images/see-live.svg" alt="see live icon">
+          </a>
+          <a href="${projects[index].links[1]}" class="btn-card-details-mobile"
+            >See Source <img src="./images/git-img.svg" alt="see github icon">
+          </a>
+        </div>
   </div>
-</div>`;
+
+</section>`;
   return popUp;
 }
 

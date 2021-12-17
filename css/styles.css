@@ -156,7 +156,7 @@ header .nav {
 }
 
 .social-icons li:hover {
-  transcontact-form: scale(1.4);
+  transform: scale(1.4);
 }
 
 .button-content img {
@@ -174,6 +174,13 @@ header .nav {
 
 .card-item img {
   margin-top: 25px;
+}
+
+.work-card-img img {
+  width: 100%;
+  object-fit: cover;
+  height: 187px;
+  border-radius: 8px 8px 0 0;
 }
 
 .social-icons a img {
@@ -218,13 +225,6 @@ header .nav {
   display: block;
 }
 
-.work-card-img img {
-  width: 100%;
-  object-fit: cover;
-  height: 187px;
-  border-radius: 8px 8px 0 0;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -233,8 +233,6 @@ header .nav {
   margin: 17px;
 }
 
-/* Man at work */
-/* ----------------------------------------------------- */
 .container .card {
   margin: 0 auto;
   max-width: 327px;
@@ -450,7 +448,6 @@ footer {
 }
 
 .contact-form form .btn {
-  margin: 5px 80px 5px 80px;
   display: flex;
   justify-content: center;
   font-size: 17px;
@@ -524,15 +521,19 @@ input[type='email'] {
   }
 
   .project-section {
-    margin-bottom: 8em;
+    margin: 0 5em;
   }
 
   .container .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    row-gap: 30px;
-    margin: 0 50px;
+    row-gap: 10px;
+  }
+
+  .grid .card {
+    min-width: 369px;
+    border: 1px solid #d0d9d4;
   }
 
   .about-me h2 {
@@ -554,8 +555,7 @@ input[type='email'] {
   }
 
   .about-me {
-    background: url('../images/about-me2-desktop.svg') -10% 100% no-repeat,
-      url('../images/about-me1-desktop.svg') 100% 0% no-repeat;
+    background: url('../images/about-me2-desktop.svg') -10% 100% no-repeat, url('../images/about-me1-desktop.svg') 100% 0% no-repeat;
   }
 
   .button-content {
@@ -595,9 +595,8 @@ input[type='email'] {
   }
 
   .contact-form {
-    background: url('../images/contact-form-img1.svg') 30% 100% no-repeat,
-      url('../images/contact-form-img2.svg') 0% 100% no-repeat,
-      url('../images/contact-form-img3.svg') 100% 0% no-repeat;
+    background: url('../images/contact-form-img1.svg') 30% 100% no-repeat, url('../images/contact-form-img2.svg') 0% 100% no-repeat, url('../images/contact-form-img3.svg') 100% 0% no-repeat;
+    margin-bottom: 12em;
   }
 
   .container-form {
@@ -613,10 +612,6 @@ input[type='email'] {
     min-width: 600px;
   }
 
-  .contact-form {
-    margin-bottom: 12em;
-  }
-
   section .contact-form {
     background: none;
   }
@@ -624,7 +619,8 @@ input[type='email'] {
   .contact-form h1 {
     justify-content: space-between;
     align-items: center;
-    font-size: 40px;
+    align-content: flex-start;
+    font-size: 30px;
     margin: 0;
     line-height: 50px;
     text-align: start;
