@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const menuBar = document.querySelector('.menu-bar'); // mobile menu container
 const btnClose = document.querySelector('.btn-close'); // button for mobile menu
 const btnMenu = document.querySelector('.btn-menu'); // button for the desktop menu
@@ -5,6 +6,11 @@ const navLink = document.querySelectorAll('#mobile-menu-bar li .nav-link');
 const tog = document.getElementsByClassName('toggle');
 const togg = Array.from(tog); // convert the nodelist to an array
 const popupMenu = document.createElement('div'); // create an empty element
+const errMessage = document.querySelector('small');
+const email = document.querySelector('.email');
+const submitBtn = document.querySelector('.btn');
+const element = email.parentElement;
+const x = element.querySelector('small');
 
 btnClose.addEventListener('click', () => {
   if (menuBar.style.display === 'flex') {
@@ -143,3 +149,31 @@ for (let i = 0; i < togg.length; i++) {
     });
   });
 }
+
+// Form Validation
+function onSuccess() {
+  errMessage.style.visibility = 'hidden';
+  errMessage.innerText = '';
+  element.classList.add('success');
+  element.classList.remove('error');
+}
+
+function onError(input) {
+  errMessage.style.visibility = 'visible';
+  errMessage.innerText = input;
+  element.classList.add('error');
+  element.classList.remove('success');
+}
+
+const regex = new RegExp('[A-Z]');
+function formValidate() {
+  if (regex.test(email.value.trim())) {
+    onError('This is an error message');
+  } else {
+    onSuccess();
+  }
+}
+
+submitBtn.addEventListener('click', (e) => {
+  formValidate();
+});
