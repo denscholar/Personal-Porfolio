@@ -181,5 +181,3 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   formValidate();
 });
-
-// Local storage
