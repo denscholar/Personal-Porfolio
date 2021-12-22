@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 const menuBar = document.querySelector('.menu-bar'); // mobile menu container
 const btnClose = document.querySelector('.btn-close'); // button for mobile menu
 const btnMenu = document.querySelector('.btn-menu'); // button for the desktop menu
@@ -8,23 +7,22 @@ const togg = Array.from(tog); // convert the nodelist to an array
 const popupMenu = document.createElement('div'); // create an empty element
 const errMessage = document.querySelector('small');
 const email = document.querySelector('.email');
-// const submitBtn = document.querySelector('.btn');
 const element = email.parentElement;
-const x = element.querySelector('small');
-const form = document.querySelector('.form-input');
-const [fullName, firstName, lastName, message] = form.elements;
 const mediaqueryList = window.matchMedia('(max-width: 768px)');
 const formData = document.querySelector('.form-input'); // gets the form element
+const [fullName, firstName, lastName, message] = formData.elements;
 
 const screenTest = (e) => {
   if (e.matches) {
     fullName.required = true;
     firstName.required = false;
     lastName.required = false;
+    message.required = false;
   } else {
     fullName.removeAttribute('required');
     firstName.required = true;
     lastName.required = true;
+    message.required = true;
   }
 };
 
@@ -173,11 +171,11 @@ function formValidate() {
     onError('Please set the email in lower case');
   } else {
     onSuccess();
-    form.submit();
+    formData.submit();
   }
 }
 
-form.addEventListener('submit', (e) => {
+formData.addEventListener('submit', (e) => {
   e.preventDefault();
   formValidate();
 });
