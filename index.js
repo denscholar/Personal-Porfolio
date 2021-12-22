@@ -12,9 +12,9 @@ const email = document.querySelector('.email');
 const element = email.parentElement;
 const x = element.querySelector('small');
 const form = document.querySelector('.form-input');
-const [fullName, firstName, lastName] = form.elements;
-
+const [fullName, firstName, lastName, message] = form.elements;
 const mediaqueryList = window.matchMedia('(max-width: 768px)');
+const formData = document.querySelector('.form-input'); // gets the form element
 
 const screenTest = (e) => {
   if (e.matches) {

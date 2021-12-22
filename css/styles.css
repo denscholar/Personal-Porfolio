@@ -47,15 +47,24 @@ header .nav a {
   display: none;
 }
 
+.btn-menu {
+  background-color: white;
+  width: 20px;
+}
+
 .btn-close {
   display: block;
   width: 50px;
   align-self: flex-end;
   margin-top: 20px;
   margin-left: 20px;
-  padding: 0.125em;
+  padding: 0.5em;
   background: #fff;
   cursor: pointer;
+}
+
+.btn-close img {
+  width: 30px;
 }
 
 .language li {
