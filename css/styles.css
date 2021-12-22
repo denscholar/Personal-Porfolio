@@ -53,9 +53,13 @@ header .nav a {
   align-self: flex-end;
   margin-top: 20px;
   margin-left: 20px;
-  padding: 0.125em;
+  padding: 0.5em;
   background: #fff;
   cursor: pointer;
+}
+
+.btn-close img{
+  width: 30px;
 }
 
 .language li {
