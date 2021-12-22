@@ -87,7 +87,7 @@
 
 .card-button-mobile {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 15px;
 }
 
@@ -151,6 +151,8 @@
     grid-row: 3 / 4;
     margin: 0;
     padding: 20px 0;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .card-button-mobile a {
