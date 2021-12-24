@@ -39,11 +39,11 @@ btnClose.addEventListener('click', () => {
   }
 });
 
-btnMenu.addEventListener('click', () => {
-  if (menuBar.style.display === 'none') {
+btnMenu.addEventListener('change', () => {
+  if (menuBar.style.display === 'flex') {
     menuBar.style.display = 'flex';
   } else {
-    menuBar.style.display = 'none';
+    menuBar.style.display = 'flex';
   }
 });
 
