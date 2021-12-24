@@ -178,11 +178,6 @@ function formValidate() {
   }
 }
 
-
-if (!this.username || !this.userEmail || !this.userText) {
-  return;
-}
-
 // local storage
 formData.addEventListener('change', () => {
   const userInfo = {
@@ -190,9 +185,8 @@ formData.addEventListener('change', () => {
     userEmail: email.value,
     userText: message.value,
   };
-
   localStorage.setItem('data', JSON.stringify(userInfo));
-  formValidate();
+  // formValidate();
 });
 
 const userInfo = () => {
