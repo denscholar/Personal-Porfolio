@@ -661,9 +661,9 @@ form.error input {
     width: inherit;
   }
 
-  .input-full-name {
+  /* .input-full-name {
     display: none;
-  }
+  } */
 
   textarea {
     height: 114px;

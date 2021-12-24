@@ -184,8 +184,11 @@ formData.addEventListener('change', () => {
     userEmail: email.value,
     userText: message.value,
   };
+  if (!this.username || !this.userEmail || !this.userText) {
+    return;
+  }
   localStorage.setItem('data', JSON.stringify(userInfo));
-  // formValidate();
+  formValidate();
 });
 
 const userInfo = () => {
