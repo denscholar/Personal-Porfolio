@@ -177,6 +177,12 @@ function formValidate() {
     formData.submit();
   }
 }
+
+
+if (!this.username || !this.userEmail || !this.userText) {
+  return;
+}
+
 // local storage
 formData.addEventListener('change', () => {
   const userInfo = {
@@ -184,9 +190,7 @@ formData.addEventListener('change', () => {
     userEmail: email.value,
     userText: message.value,
   };
-  if (!this.username || !this.userEmail || !this.userText) {
-    return;
-  }
+
   localStorage.setItem('data', JSON.stringify(userInfo));
   formValidate();
 });
