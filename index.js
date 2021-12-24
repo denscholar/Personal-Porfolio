@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const menuBar = document.querySelector('.menu-bar'); // mobile menu container
 const btnClose = document.querySelector('.btn-close'); // button for mobile menu
 const btnMenu = document.querySelector('.btn-menu'); // button for the desktop menu
@@ -7,10 +8,12 @@ const togg = Array.from(tog); // convert the nodelist to an array
 const popupMenu = document.createElement('div'); // create an empty element
 const errMessage = document.querySelector('small');
 const email = document.querySelector('.email');
+const message = document.querySelector('.msg');
 const element = email.parentElement;
 const mediaqueryList = window.matchMedia('(max-width: 768px)');
 const formData = document.querySelector('.form-input'); // gets the form element
-const [fullName, firstName, lastName, message] = formData.elements;
+
+const [fullName, firstName, lastName] = formData.elements;
 
 const screenTest = (e) => {
   if (e.matches) {
@@ -174,8 +177,24 @@ function formValidate() {
     formData.submit();
   }
 }
-
-formData.addEventListener('submit', (e) => {
-  e.preventDefault();
-  formValidate();
+// local storage
+formData.addEventListener('change', () => {
+  const userInfo = {
+    username: fullName.value,
+    userEmail: email.value,
+    userText: message.value,
+  };
+  localStorage.setItem('data', JSON.stringify(userInfo));
+  // formValidate();
 });
+
+const userInfo = () => {
+  const data = JSON.parse(localStorage.getItem('data'));
+  if (data) {
+    fullName.value = data.username;
+    email.value = data.userEmail;
+    message.value = data.userText;
+  }
+};
+
+window.onload = userInfo();
